@@ -1,4 +1,4 @@
-# Xync 📱💻
+# Xync
 
 **Mirror, control, and manage your Android devices wirelessly from your Mac.**
 Powered by the incredible [scrcpy](https://github.com/Genymobile/scrcpy), Xync provides a beautiful, native macOS interface for managing your Android devices without touching a terminal.
@@ -29,7 +29,7 @@ The **first time you open Xync**, a built-in Setup Wizard will automatically dow
 ## 📦 Installation (Free Download)
 
 1. Go to the [Releases](https://github.com/adipanchal/xync/releases) page.
-2. Download the latest `Xync.app.zip` or `Xync.dmg`.
+2. Download the latest `Xync.dmg`.
 3. Drag the **Xync** application into your `Applications` folder.
 
 *(Note: Because this is an indie app, macOS Gatekeeper may block the first launch. Simply **Right-click** the Xync app, and choose **Open**, then click "Open" on the warning dialog to bypass this once.)*
