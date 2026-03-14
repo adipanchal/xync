@@ -7,6 +7,7 @@
 
 import Foundation
 import AppKit
+import Combine
 
 class UpdateManager: ObservableObject {
     @Published var showUpdateAlert = false
