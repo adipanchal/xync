@@ -305,7 +305,7 @@ class ShellManager: ObservableObject {
         }
     }
     
-    func startScrcpy(serial: String? = nil, stayAwake: Bool, turnScreenOff: Bool, alwaysOnTop: Bool, rotation: Int, borderless: Bool = false, isCamera: Bool = false, cameraSource: String = "back", dexResolution: String? = nil) {
+    func startScrcpy(serial: String? = nil, stayAwake: Bool, turnScreenOff: Bool, alwaysOnTop: Bool, rotation: Int, isCamera: Bool = false, cameraSource: String = "back", dexResolution: String? = nil) {
         var args = ["'\(scrcpyPath)'"] // Quote the path in case it contains spaces
         
         // Ensure we always have a serial to track the process safely
@@ -323,10 +323,6 @@ class ShellManager: ObservableObject {
         }
         
         if alwaysOnTop { args.append("--always-on-top") }
-        
-        if borderless && !isCamera {
-            args.append("--window-borderless")
-        }
         
         if rotation != 0 {
             let angle = rotation * 90

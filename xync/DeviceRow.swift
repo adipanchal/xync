@@ -13,7 +13,6 @@ struct DeviceRow: View {
     @Binding var turnScreenOff: Bool
     @Binding var alwaysOnTop: Bool
     @Binding var rotation: Int
-    @Binding var borderlessMode: Bool
     
     let onMirror: (Bool, String) -> Void
     let onStop: () -> Void
@@ -60,8 +59,7 @@ struct DeviceRow: View {
                             stayAwake: $stayAwake,
                             turnScreenOff: $turnScreenOff,
                             alwaysOnTop: $alwaysOnTop,
-                            rotation: $rotation,
-                            borderlessMode: $borderlessMode
+                            rotation: $rotation
                         )
                     }
                     

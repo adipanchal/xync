@@ -13,7 +13,6 @@ struct ContentView: View {
     @State private var turnScreenOff = false
     @State private var alwaysOnTop = false
     @State private var rotation = 0
-    @AppStorage("borderlessMode") private var borderlessMode = true
     
     @State private var devices: [Device] = []
     @State private var showWizard = false
@@ -70,7 +69,6 @@ struct ContentView: View {
                                 turnScreenOff: $turnScreenOff,
                                 alwaysOnTop: $alwaysOnTop,
                                 rotation: $rotation,
-                                borderlessMode: $borderlessMode,
                                 onMirror: { isCamera, source in
                                     launchScrcpy(serial: device.serial, isCamera: isCamera, source: source)
                                 },
@@ -221,7 +219,6 @@ struct ContentView: View {
             turnScreenOff: turnScreenOff,
             alwaysOnTop: alwaysOnTop,
             rotation: rotation,
-            borderless: borderlessMode,
             isCamera: isCamera,
             cameraSource: source,
             dexResolution: dexResolution

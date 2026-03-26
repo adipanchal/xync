@@ -12,7 +12,6 @@ struct DeviceSettingsPopover: View {
     @Binding var turnScreenOff: Bool
     @Binding var alwaysOnTop: Bool
     @Binding var rotation: Int
-    @Binding var borderlessMode: Bool
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -22,11 +21,6 @@ struct DeviceSettingsPopover: View {
             Divider()
             
             VStack(alignment: .leading, spacing: 12) {
-                Toggle("iPhone Mirroring Style", isOn: $borderlessMode)
-                    .toggleStyle(.switch)
-                    .help("Removes macOS window borders. Hold Cmd + Click to drag.")
-                
-                Divider()
                 Toggle("Stay Awake", isOn: $stayAwake)
                     .toggleStyle(.checkbox)
                 
